@@ -1,0 +1,1 @@
+export var demo_value = "Hey!"
