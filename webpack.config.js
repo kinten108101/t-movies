@@ -5,7 +5,7 @@ module.exports = {
 	module : {
 		rules : [
 		{
-			test : /\.(js)$/,
+			test : /\.(js|jsx)$/,
 			exclude : /node_modules/,
 			use : ['babel-loader']
 		},
@@ -17,15 +17,17 @@ module.exports = {
 		]
 	},
 	resolve : {
-		extensions : ['*', '.js'],
+		extensions : ['*', '.js', '.jsx'],
 	},
 	// why __dirname? how does path.resolve work?
 	// without babel, the module and resolve parts are not necessary
 	output : {
 		path : path.resolve(__dirname, './dist'),
 		filename : 'bundled-script.js',
+		publicPath : '/'
 	},
 	devServer : {
 		static : path.resolve(__dirname, './dist'),
+		historyApiFallback: true
 	},
 }

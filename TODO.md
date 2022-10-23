@@ -1,2 +1,4 @@
-TODO: replace tv_name with id. Then /GET from id. Should depends on tvmaze api
-TODO: Feed view
+KINTEN/TODO: Fix CSS
+KINTEN/TODO: Get Heroku to deploy this repo
+KINTEN/TODO: Window popup?
+DANKO/TODO: push branch api-test. This includes REST API in action
