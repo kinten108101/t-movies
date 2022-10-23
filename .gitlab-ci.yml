@@ -1,4 +1,5 @@
 job_one:
+    script:
     - echo "hi"
 
 job_two:
