@@ -1,5 +1,6 @@
 KINTEN/TODO: Fix CSS
-KINTEN/TODO: Get Heroku to deploy this repo
+KINTEN/TODO/DONE: Get Heroku to deploy this repo
+KINTEN/TODO: Write our own backend script (src/server.js)
 KINTEN/TODO/CANCELED: Window popup?
 ADDENDUM: 
 KINTEN/TODO/DONE: Fix React Router not handling non-root requests
