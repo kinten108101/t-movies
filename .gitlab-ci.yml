@@ -1,8 +1,10 @@
 job_one:
+    tags: [ saas-linux-small-amd64 ]
     script:
     - echo "hi"
 
 job_two:
+    tags: [ saas-linux-small-amd64 ]
     script:
         - git remote add heroku https://heroku:$HEROKU_APIKEY@git.heroku.com/t-movies-app.git
         - git push -f heroku main
