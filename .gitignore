@@ -1,2 +1,3 @@
 node_modules/*
 DOC.md
+dist/bundled-script*
