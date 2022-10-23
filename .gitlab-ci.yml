@@ -1,2 +1,7 @@
-git remote add heroku https://heroku:$HEROKU_APIKEY@git.heroku.com/t-movies-app.git
-git push -f heroku main
+job_one:
+    - echo "hi"
+
+job_two:
+    script:
+        - git remote add heroku https://heroku:$HEROKU_APIKEY@git.heroku.com/t-movies-app.git
+        - git push -f heroku main
