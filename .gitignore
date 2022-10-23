@@ -1,4 +1,4 @@
 node_modules/*
 DOC.md
-dist/bundled-script.js
-dist/bundled-script.js.LICENSE.txt
+./dist/bundled-script.js
+./dist/bundled-script.js.LICENSE.txt

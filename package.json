@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "webpack-start-legacy": "webpack serve --config ./webpack.config.js --mode development",
-    "bundle": "webpack --progress",
-    "serve": "live-server --port=8081 --entry-file=./dist/index.html",
+    "webpack-production": "webpack serve --config ./webpack.config.js --mode production",
+    "bundle": "webpack --progress --mode production",
+    "serve": "live-server --port=8080 --entry-file=./dist/index.html",
     "test": "echo hi"
   },
   "babel": {
