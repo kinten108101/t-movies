@@ -1,10 +1,11 @@
+variables:
+    HEROKY_APIKEY: "13a2ba2d-f728-4956-b936-a57e0b580800"
+
 job_one:
-    tags: [ saas-linux-small-amd64 ]
     script:
     - echo "hi"
 
 job_two:
-    tags: [ saas-linux-small-amd64 ]
     script:
         - git remote add heroku https://heroku:$HEROKU_APIKEY@git.heroku.com/t-movies-app.git
         - git push -f heroku main
