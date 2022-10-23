@@ -5,21 +5,6 @@ import {MvHome} from "./components/home.jsx";
 import {MvLibrary} from "./components/library.jsx";
 import {MvFeed} from "./components/feed.jsx";
 import {NotFound} from "./components/notfound.jsx";
-/*
-const App = () => {
-	return (
-	<React.StrictMode>
-		<BrowserRouter>
-			<Routes>
-				<Route index element={<PageMain />} />
-				<Route path="library" element={<PageLibrary />} />
-				<Route path="feed" element={<PageFeed />} />
-			</Routes>
-		</BrowserRouter>
-	</React.StrictMode>
-	);
-} 
-*/
 
 const App = () => {
 	return (
