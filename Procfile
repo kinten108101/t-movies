@@ -1,1 +1,1 @@
-web: npm run webpack-start-legacy
+web: npm run serve

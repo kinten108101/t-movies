@@ -7,8 +7,8 @@
     "webpack-start-legacy": "webpack serve --config ./webpack.config.js --mode development",
     "webpack-production": "webpack serve --config ./webpack.config.js --mode production",
     "bundle": "webpack --progress --mode production",
-    "serve": "live-server --port=8080 --entry-file=./dist/index.html",
-    "test": "echo hi"
+    "serve": "live-server --port=$PORT --entry-file=./dist/index.html",
+    "test": "nodemon src/index.js"
   },
   "babel": {
     "presets": [
