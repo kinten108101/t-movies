@@ -51,7 +51,7 @@ export const MovieDetails = () => {
       </div>
 
       <div>
-        <h2>Genre: {movie?.genres}</h2>
+        <h2>Genre: {movie?.genres?.join(", ")}</h2>
       </div>
 
       <div>{character_render}</div>
