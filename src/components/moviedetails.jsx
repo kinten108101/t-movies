@@ -43,7 +43,7 @@ export const MovieDetails = () => {
 
       <div>
         <h2>Description</h2>
-        <div>{movie?.summary}</div>
+        <div dangerouslySetInnerHTML={{ __html: movie?.summary }}></div>
       </div>
 
       <div>
