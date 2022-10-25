@@ -26,9 +26,9 @@ body {
 }
 
 .cgcard {
-  width: 10em;
-  height: 8em;
-  border-radius: 1em;
+  width: 14em;
+  height: 19.6em;
+  border-radius: 0.618em;
   color: #241f31;
   background-color: #deddda;
   overflow: hidden;
@@ -40,7 +40,9 @@ body {
 .cgcard_thumbnail {
   width: inherit;
   height: 100%;
-  background-size: 150% auto;
+  background-size: 100% auto;
+  vertical-align: middle;
+  background-repeat: no-repeat;
 }
 
 .cgcard_title {
