@@ -23,11 +23,22 @@ const NavCmdFeed = () => {
   );
 };
 
+const NavCmdTrending = () => {
+  let count = 69;
+  return (
+    <Link className="nav-cmd" id="nav-cmd-trending" to="/trending">
+      <div className="nav-cmd-title">Trending</div>
+      <div className="nav-cmd-count">{count}</div>
+    </Link>
+  );
+};
+
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <Searchbar />
       <NavCmdLibrary />
+      <NavCmdTrending />
       <NavCmdFeed />
     </div>
   );
