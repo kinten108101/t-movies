@@ -7,7 +7,7 @@ import { MvFeed } from "./components/feed.jsx";
 import { NotFound } from "./components/notfound.jsx";
 import { MovieDetails } from "./components/moviedetails.jsx";
 import { MovieList } from "./components/movielist.jsx";
-
+import { Trending } from "./components/trending.jsx";
 const App = () => {
   return (
     <React.StrictMode>
@@ -19,6 +19,7 @@ const App = () => {
             <Route path="feed" element={<MvFeed />} />
             <Route path="show/:id" element={<MovieDetails />} />
             <Route path="movielist" element={<MovieList />} />
+            <Route path="trending" element={<Trending />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
