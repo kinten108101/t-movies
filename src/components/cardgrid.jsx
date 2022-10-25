@@ -11,6 +11,7 @@ const CardgridCard = (props) => {
       <Link to={`/show/${props.id}`}>
         <div
           className="cgcard_thumbnail"
+          loading="lazy"
           style={{
             backgroundImage: url,
           }}

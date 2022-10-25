@@ -24,7 +24,7 @@ export const MovieList = () => {
   const movie_render = movie?.map((phim) => (
     <CardgridCard
       id={phim?.show?.id}
-      tv_img={phim?.show?.image?.medium}
+      tv_img={phim?.show?.image?.original}
       tv_name={phim?.show?.name}
     ></CardgridCard>
   ));

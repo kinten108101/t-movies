@@ -55,7 +55,7 @@ const Trendmoviedetail = (props) => {
   return (
     <CardgridCard
       id={movie?.id}
-      tv_img={movie?.image?.medium}
+      tv_img={movie?.image?.original}
       tv_name={movie?.name}
     ></CardgridCard>
   );
