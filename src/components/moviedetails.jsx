@@ -26,7 +26,7 @@ export const MovieDetails = () => {
 
   const character_render = cast_show?.map((nhanvat) => (
     <div className="nhanvat">
-      <img src={nhanvat?.character?.image?.original} />
+      <img loading="lazy" src={nhanvat?.character?.image?.original} />
       <h3>{nhanvat?.person?.name}</h3>
       <p>As {nhanvat?.character?.name}</p>
     </div>
@@ -38,7 +38,7 @@ export const MovieDetails = () => {
     <div className="movie-detail mainview">
       <div>
         <h2>{movie?.name}</h2>
-        <img src={movie?.image?.original} alt="#" />
+        <img loading="lazy" src={movie?.image?.original} alt="#" />
       </div>
 
       <div>

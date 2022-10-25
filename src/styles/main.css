@@ -91,12 +91,13 @@ body {
 }
 
 .nhanvat img {
-  width: 12em;
-  height: 21em;
+  width: 14em;
+  height: auto;
   background-size: 100% auto;
-  vertical-align: middle;
+  vertical-align: center;
   margin-right: 15px;
   float: left;
+  object-fit: cover;
 }
 
 .nhanvat h3,
