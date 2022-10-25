@@ -87,9 +87,14 @@ body {
   padding: 20px;
   overflow: hidden;
   display: inline-block;
+  margin: 1.5rem 1rem 1.5rem 1rem;
 }
 
 .nhanvat img {
+  width: 12em;
+  height: 21em;
+  background-size: 100% auto;
+  vertical-align: middle;
   margin-right: 15px;
   float: left;
 }
@@ -104,4 +109,10 @@ body {
 
 .movie-detail {
   color: whitesmoke;
+}
+
+.movie-detail img {
+  width: 14em;
+  height: 19.6em;
+  display: inline-block;
 }
