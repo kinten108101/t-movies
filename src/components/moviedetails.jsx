@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../app";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { MOVIE_DETAILS_URL } from "../api";
 
@@ -26,9 +26,11 @@ export const MovieDetails = () => {
 
   const character_render = cast_show?.map((nhanvat) => (
     <div className="nhanvat">
-      <img loading="lazy" src={nhanvat?.character?.image?.original} />
-      <h3>{nhanvat?.person?.name}</h3>
-      <p>As {nhanvat?.character?.name}</p>
+      <Link to={`/actor/${nhanvat?.person?.id}`}>
+        <img loading="lazy" src={nhanvat?.character?.image?.original} />
+        <h3>{nhanvat?.person?.name}</h3>
+        <p>As {nhanvat?.character?.name}</p>
+      </Link>
     </div>
   ));
 
