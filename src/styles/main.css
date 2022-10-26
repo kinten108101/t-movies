@@ -117,3 +117,15 @@ body {
   height: 19.6em;
   display: inline-block;
 }
+
+.actor-details {
+  color: whitesmoke;
+}
+
+.actor-details img {
+  width: 15em;
+  height: 22.5em;
+  background-size: 100% auto;
+  vertical-align: center;
+  object-fit: cover;
+}

@@ -67,7 +67,7 @@ export const Trending = () => {
 
   return (
     <div className="mainview">
-      Your mom
+      funny
       <div>
         {trending?.map((phim) => (
           <Trendmoviedetail name={phim} />

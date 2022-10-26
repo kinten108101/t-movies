@@ -8,6 +8,8 @@ import { NotFound } from "./components/notfound.jsx";
 import { MovieDetails } from "./components/moviedetails.jsx";
 import { MovieList } from "./components/movielist.jsx";
 import { Trending } from "./components/trending.jsx";
+import { ActorPage } from "./components/actordetails.jsx";
+
 const App = () => {
   return (
     <React.StrictMode>
@@ -20,6 +22,7 @@ const App = () => {
             <Route path="show/:id" element={<MovieDetails />} />
             <Route path="movielist" element={<MovieList />} />
             <Route path="trending" element={<Trending />} />
+            <Route path="actor/:id" element={<ActorPage />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
