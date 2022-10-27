@@ -83,6 +83,7 @@ body {
 
 .nhanvat {
   width: 400px;
+  border-radius: 0.618em;
   border: 2px solid #7f7f7f;
   padding: 20px;
   overflow: hidden;
@@ -93,11 +94,13 @@ body {
 .nhanvat img {
   width: 14em;
   height: auto;
+  border-radius: 0.618em;
   background-size: 100% auto;
   vertical-align: center;
   margin-right: 15px;
   float: left;
   object-fit: cover;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px black;
 }
 
 .nhanvat h3,
