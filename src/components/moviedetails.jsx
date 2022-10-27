@@ -49,8 +49,11 @@ export const MovieDetails = () => {
       return (
         <h2>
           <span>
-            <strong>Next episode</strong>: {days} days, {hours} hours, {minutes}{" "}
-            minutes, {seconds} seconds
+            <strong>
+              Next episode 『 SEASON {next_episode?.season} | EP
+              {next_episode?.number} 』
+            </strong>
+            : {days} days, {hours} hours, {minutes} minutes, {seconds} seconds
           </span>
         </h2>
       );
