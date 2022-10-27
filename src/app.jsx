@@ -9,7 +9,7 @@ import { MovieDetails } from "./components/moviedetails.jsx";
 import { MovieList } from "./components/movielist.jsx";
 import { Trending } from "./components/trending.jsx";
 import { ActorPage } from "./components/actordetails.jsx";
-
+import { SeasonDetails } from "./components/seasondetails.jsx";
 const App = () => {
   return (
     <React.StrictMode>
@@ -23,6 +23,7 @@ const App = () => {
             <Route path="movielist" element={<MovieList />} />
             <Route path="trending" element={<Trending />} />
             <Route path="actor/:id" element={<ActorPage />} />
+            <Route path="season/:id" element={<SeasonDetails />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

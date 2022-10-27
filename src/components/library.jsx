@@ -25,7 +25,9 @@ const MovieDetails = (props) => {
 };
 
 const MvLibrary = () => {
-  const featured_movie = [169, 618, 48945, 28276, 40329, 1371, 305, 269, 82];
+  const featured_movie = [
+    169, 618, 48945, 28276, 40329, 1371, 305, 269, 82, 50907, 1905, 23470,
+  ];
 
   return (
     <div className="mainview">

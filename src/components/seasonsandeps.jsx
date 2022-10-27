@@ -3,7 +3,7 @@ import "../app";
 import axios from "axios";
 import { MOVIE_DETAILS_URL } from "../api";
 import useCollapse from "react-collapsed";
-
+import { Link } from "react-router-dom";
 export const Seasons = (props) => {
   //GET MOVIE INFO
   const [seasons, setSeasons] = useState();
@@ -32,7 +32,9 @@ export const Seasons = (props) => {
         <div {...getCollapseProps()}>
           <div className="content">
             {seasons?.map((mua) => (
-              <div className="season-tag">Seasons {mua?.number}</div>
+              <Link to={`/season/${mua?.id}`}>
+                <div className="season-tag">Seasons {mua?.number}</div>
+              </Link>
             ))}
           </div>
         </div>
