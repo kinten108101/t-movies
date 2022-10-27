@@ -4,6 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { MOVIE_DETAILS_URL } from "../api";
 import Countdown from "react-countdown";
+import { Seasons } from "./seasonsandeps";
 
 export const MovieDetails = () => {
   //GET MOVIE INFO
@@ -86,6 +87,8 @@ export const MovieDetails = () => {
           <Countdown date={`${next_episode?.airstamp}`} renderer={renderer} />
         </div>
       ) : null}
+
+      <Seasons id={id} />
 
       <div>{character_render}</div>
     </div>
