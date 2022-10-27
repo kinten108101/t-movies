@@ -3,8 +3,10 @@ import "../app";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { MOVIE_DETAILS_URL } from "../api";
+import Countdown from "react-countdown";
 
 export const MovieDetails = () => {
+  //GET MOVIE INFO
   const [movie, setMovie] = useState({});
 
   const { id } = useParams();
@@ -12,18 +14,16 @@ export const MovieDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`${MOVIE_DETAILS_URL}/${id}?embed=cast`)
+      .get(`${MOVIE_DETAILS_URL}/${id}?embed[]=cast&embed[]=nextepisode`)
       .then((res) => {
         setMovie(res.data);
       })
       .catch((error) => console.log(error));
   }, [id]);
 
-  console.log(movie);
-
   const cast_show = movie?._embedded?.cast;
-  console.log(cast_show);
 
+  // CASTING AREA
   const character_render = cast_show?.map((nhanvat) => (
     <div className="nhanvat">
       <Link to={`/actor/${nhanvat?.person?.id}`}>
@@ -34,8 +34,27 @@ export const MovieDetails = () => {
     </div>
   ));
 
-  console.log(character_render);
+  // NEXT EPISODE AREA
+  const next_episode = movie?._embedded?.nextepisode;
+  console.log(next_episode?.airstamp);
+  const renderer = ({ hours, minutes, seconds, completed }) => {
+    if (completed) {
+      // Render a complete state
+      return <h2>Aring</h2>;
+    } else {
+      // Render a countdown
+      return (
+        <h2>
+          <span>
+            <strong>Next episode</strong>: {hours} hours, {minutes} minutes,{" "}
+            {seconds} seconds
+          </span>
+        </h2>
+      );
+    }
+  };
 
+  //RETURN SECTION
   return (
     <div className="movie-detail mainview">
       <div>
@@ -55,6 +74,16 @@ export const MovieDetails = () => {
       <div>
         <h2>Genre: {movie?.genres?.join(", ")}</h2>
       </div>
+
+      <div>
+        <h2>Status: {movie?.status}</h2>
+      </div>
+
+      {next_episode?.airstamp ? (
+        <div>
+          <Countdown date={`${next_episode?.airstamp}`} renderer={renderer} />
+        </div>
+      ) : null}
 
       <div>{character_render}</div>
     </div>
