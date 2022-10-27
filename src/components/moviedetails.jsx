@@ -37,7 +37,9 @@ export const MovieDetails = () => {
   // NEXT EPISODE AREA
   const next_episode = movie?._embedded?.nextepisode;
   console.log(next_episode?.airstamp);
-  const renderer = ({ hours, minutes, seconds, completed }) => {
+
+  // COUNTDOWN RENDER
+  const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
       // Render a complete state
       return <h2>Aring</h2>;
@@ -46,8 +48,8 @@ export const MovieDetails = () => {
       return (
         <h2>
           <span>
-            <strong>Next episode</strong>: {hours} hours, {minutes} minutes,{" "}
-            {seconds} seconds
+            <strong>Next episode</strong>: {days} days, {hours} hours, {minutes}{" "}
+            minutes, {seconds} seconds
           </span>
         </h2>
       );
