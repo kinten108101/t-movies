@@ -21,13 +21,13 @@ export const MovieDetails = () => {
   }, [id]);
   const cast = movie?._embedded?.cast
   const md_cast_cards_render = cast?.map((nhanvat) => (
-    <div className="nhanvat">
-      <Link to={`/actor/${nhanvat?.person?.id}`}>
-        <img loading="lazy" src={nhanvat?.character?.image?.original} />
-        <h3>{nhanvat?.person?.name}</h3>
-        <p>As {nhanvat?.character?.name}</p>
-      </Link>
-    </div>
+    <Link to={`/actor/${nhanvat?.person?.id}`}>
+      <div className="nhanvat">
+          <img loading="lazy" src={nhanvat?.character?.image?.original} />
+          <h3>{nhanvat?.person?.name}</h3>
+          <p>As {nhanvat?.character?.name}</p>
+      </div>
+    </Link>
   ));
 
   const md_genre_tags_render = movie?.genres?.map(
@@ -43,7 +43,7 @@ export const MovieDetails = () => {
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
       // Render a complete state
-      return <h2>Aring</h2>;
+      return <h2>Airing</h2>;
     } else {
       // Render a countdown
       return (

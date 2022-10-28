@@ -4,7 +4,7 @@ import "../styles/main.css";
 import { MOVIE_DETAILS_URL } from "../api.js";
 import axios from "axios";
 
-const MovieDetails = (props) => {
+const RenderCardIter = (props) => {
   const [movie, setMovie] = useState({});
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const MvLibrary = () => {
   return (
     <div className="mainview">
       {featured_movie?.map((idphim) => (
-        <MovieDetails id={idphim} />
+        <RenderCardIter id={idphim} />
       ))}
     </div>
   );

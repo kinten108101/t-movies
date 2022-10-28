@@ -4,10 +4,10 @@ import "../styles/main.css";
 import { Searchbar } from "./searchbar";
 
 const NavCmdLibrary = () => {
-  let count = 5;
+  let count = -1;
   return (
     <Link className="nav-cmd" id="nav-cmd-libary" to="/library">
-      <div className="nav-cmd-title">Trending</div>
+      <div className="nav-cmd-title">Library</div>
       <div className="nav-cmd-count">{count}</div>
     </Link>
   );
