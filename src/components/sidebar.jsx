@@ -6,7 +6,7 @@ const NavCmdLibrary = () => {
   let count = 5;
   return (
     <Link className="nav-cmd" id="nav-cmd-libary" to="/library">
-      <div className="nav-cmd-title">Library</div>
+      <div className="nav-cmd-title">Trending</div>
       <div className="nav-cmd-count">{count}</div>
     </Link>
   );
@@ -22,6 +22,24 @@ const NavCmdFeed = () => {
   );
 };
 
+const SiteHeader = () => {
+  const siteSubtitle = "TV for TVMaze";
+  return (
+    <div className="site-header">
+      <img src="/assets/mazeboy.svg" className="logo" />
+      <div className="site-subtitle">{siteSubtitle}</div>
+    </div>
+  );
+}
+
+const Credit = () => {
+  return (
+    <div className="site-credit">
+      closed-source · 2022
+    </div>
+  );
+}
+
 const Sidebar = () => {
   const [isDarkTheme, setDarkTheme] = useState(true);
   const [value, setValue] = useState("");
@@ -36,19 +54,21 @@ const Sidebar = () => {
       navigate(`/movielist?name=${value}`);
     }
   };
-
   return (
     <div className="sidebar">
+      <div className="sidebar-header"></div>
+      <SiteHeader />
       <form onSubmit={handleSearch}>
         <input
           className="searchbar"
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          placeholder="Search"
         />
       </form>
       <NavCmdLibrary />
       <NavCmdFeed />
+      <Credit />
+      <div className="sidebar-footer" />
     </div>
   );
 };

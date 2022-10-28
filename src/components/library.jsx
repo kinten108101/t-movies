@@ -6,12 +6,6 @@ const MvLibrary = () => {
   return (
     <div className="mainview">
       <CardgridCard
-        id="169"
-        tv_name="Breaking Bad"
-        tv_display_name="true"
-        tv_img="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg2.looper.com%2Fimg%2Fgallery%2Fthe-best-episodes-of-breaking-bad%2Fl-intro-1609890074.jpg&f=1&nofb=1&ipt=e44622c7354acca258e41d466df523634feef83b24808c8ab8cbfc1bac5f3afe&ipo=images"
-      />
-      <CardgridCard
         id="618"
         tv_name="Better Call Saul"
         tv_display_name="true"

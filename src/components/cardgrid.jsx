@@ -14,15 +14,14 @@ const CardgridCard = (props) => {
           style={{
             backgroundImage: url,
           }}
+        ></div>
+        <div
+          className="cgcard_title"
+          style={{
+            visibility: title_visible,
+          }}
         >
-          <div
-            className="cgcard_title"
-            style={{
-              visibility: title_visible,
-            }}
-          >
-            {props.tv_name}
-          </div>
+          {props.tv_name}
         </div>
       </Link>
     </div>

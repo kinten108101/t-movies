@@ -19,8 +19,6 @@ export const MovieList = () => {
       .catch((error) => console.log(error));
   }, [search]);
 
-  console.log(movie);
-
   const movie_render = movie?.map((phim) => (
     <CardgridCard
       id={phim?.show?.id}

@@ -1,90 +1,333 @@
-@import url("https://fonts.googleapis.com/css2?family=Cantarell&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap');
 
 body {
   margin: 0;
   padding: 0;
+  --num: 1em;
+  --margin-left-for-sidebar: 12em;
+  --gnome-cream-white: #F6F5F4;
+  --primary: #3C948B;
+  --pr-dark: #3E6F6A;
+  background-color: black;
 }
 
 .wrapper {
-  background-color: #222222;
   min-height: 100%;
+  width: auto;
+  margin-left: 5em;
+  margin-right: auto;
+}
+
+.logo
+{
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5em;
+}
+
+.site-subtitle
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: "Cantarell",monospace;
+  font-style: italic;
+  font-weight: bolder;
+  margin-bottom: 1em;
 }
 
 .sidebar {
-  width: 10rem;
-  height: 100%;
-  position: fixed;
-  background-color: #303030;
+  background-color: var(--gnome-cream-white);
+  width: 10em;
+  height: auto;
+  border-radius: 1em;
+  margin-top: 1em;
   display: inline-block;
+  position: fixed;
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+.site-credit
+{
+  display: block;
+  margin-top: 2em;
+  font-family: "Cantarell",monospace;
+  text-align: center;
+  color: #C0BFBC;
 }
 
 .mainview {
-  width: calc(100% - 25rem);
-  height: unset;
-  margin-left: 11rem;
-  display: inline-block;
+  width: auto;
+  min-height: 100%;
+  margin-left: var(--margin-left-for-sidebar);
+  overflow: scroll;
+  border-radius: 0.5em 0.5em 1em 1em;
+  padding-top: 1em;
+}
+
+/* hide scroll bar */
+
+.mainview::-webkit-scrollbar
+{
+  display: none; /* Chrome, Safari, Opera */
+  
+}
+
+.mainview
+{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .cgcard {
   width: 10em;
-  height: 8em;
-  border-radius: 1em;
+  height: 16em;
   color: #241f31;
   background-color: #deddda;
-  overflow: hidden;
+  border-radius: 1em;
   display: inline-block;
-  margin: 1.5rem 1rem 1.5rem 1rem;
-  box-shadow: 0 1pt 2pt black;
+  margin: 1.5rem 1rem 1rem 1rem;
 }
 
 .cgcard_thumbnail {
-  width: inherit;
-  height: 100%;
-  background-size: 150% auto;
+  width: 10em;
+  height: 16em;
+  background-size: auto 16em;
+  position: absolute;
+  border-radius: 1em;
+  box-shadow: 0pt -7pt 2pt 0pt black inset;
 }
 
 .cgcard_title {
-  width: inherit;
-  height: inherit;
-  display: flex;
-  align-items: flex-end;
+  margin-top: 13em;
+  position: absolute;
+  width: 7em;
+  height: 3em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
   justify-content: center;
   font-family: "Cantarell", "monospace";
+  font-size: 1em;
+  font-style: oblique;
   color: #f6f5f4;
-  padding-bottom: 5em;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
 }
 
 .searchbar {
   width: 10em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5em;
+  font-family: "Cantarell",monospace;
 }
 
 .nav-cmd {
   display: block;
-  height: 1em;
-  margin: 0.5em 1em 0.5em 1em;
-  font-family: "Cantarell", monospace;
+  height: 2em;
+  margin: 0em 1em 0em 1em;
+  background-color: inherit;
+  border-radius: 5pt;
+  user-select: none;
+}
+
+.nav-cmd:hover {
+  background-color: #9a9996;
 }
 
 .nav-cmd-title {
-  display: inline-block;
+  font-family: "Cantarell", monospace;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1em;
+  color: #5e5c64;
+  display: flex;
+  height: inherit;
   float: left;
+  align-items: center;
+  margin-left: 0.4em;
 }
 
 .nav-cmd-count {
-  display: inline-block;
+  font-family: "Cantarell", monospace;
+  font-weight: bold;
+  color: #F6F5F4;
+  background-color: #5e5c64;
+  border-radius: 1em;
+  display: flex;
+  align-items: center; /* vertical */ 
+  justify-content: safe center; /* horizontal */
   float: right;
+  /* below is the current way to vertically center the element */
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  height: 1.5em;
+  width: 1.5em;
+  margin-right: 0.5em;
+}
+
+.sidebar a,
+.sidebar a:visited
+{
+  color: inherit;
+}
+
+.movie-detail {
+  color: #303030;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.movie-detail p
+{
+  font-family: "Cantarell",monospace;
+}
+
+.movie-detail h2
+{
+  font-family: "Courier Prime";
+  text-align: center;
+}
+
+/* Movie Detail's Header */
+
+.md-header-block
+{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 20em;
+  background-color: var(--gnome-cream-white);
+  font-family: "Cantarell",serif;
+  border-radius: 1em 0 0 1em;
+  margin-bottom: 32px;
+}
+
+.md-header-col-left
+{
+  display: block;
+  margin-left: 1em;
+
+}
+
+.md-header-col-right
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 1em;
+  width: auto;
+  height: 100%;
+}
+
+.md-header-col-right-row-0,
+.md-header-col-right-row-1
+{
+  padding-up: 1em;
+  padding-right: 1em;
+  padding-right: 1em;
+  overflow: hidden;
+}
+
+.md-header-thumbnail
+{
+  display: block;
+  width: auto;
+  height: 90%;
+  border-radius: 1em;
+}
+
+.md-header-title
+{
+  display: inline-block;
+  font-size: 2em;
+}
+
+.md-header-rating
+{
+  display: block;
+}
+
+.md-header-genre-block
+{
+  display: block;
+}
+
+.md-header-genre-tag
+{
+  display: inline;
+  background-color: var(--primary);
+  color: var(--gnome-cream-white);
+  box-shadow: 0 4px 0 0 var(--pr-dark);
+  border-radius: 0.5em;
+  border-width: 2px;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+}
+
+.md-body-block
+{
+  display: flex;
+}
+
+.md-header-separator
+{
+  border-color: #303030;
+}
+
+.md-desc-panel
+{
+  display: block;
+  width: 30em;
+}
+
+/* Movie Detail's Cast panel */
+
+.md-cast-panel
+{
+  display: block;
+  background-color: #3C5855;
+  font-family: "Cantarell",serif;
+  max-width: 15em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.md-cast-title
+{
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.md-cast-cards-list
+{
 }
 
 .nhanvat {
-  width: 400px;
-  border: 4px solid red;
-  padding: 20px;
+  width: 100%;
+  height: 5em;
+  margin-bottom: 1em;
+  background-color: #3C948B;
   overflow: hidden;
   display: inline-block;
+  box-shadow: 0 6px 0 0 #3E6F6A;
 }
 
 .nhanvat img {
   margin-right: 15px;
+  height: inherit;
+  width: auto;
   float: left;
 }
 
@@ -93,9 +336,4 @@ body {
   margin-left: 15px;
   display: block;
   margin: 2px 0 0 0;
-  color: whitesmoke;
-}
-
-.movie-detail {
-  color: whitesmoke;
 }
