@@ -27,7 +27,7 @@ export const Seasons = (props) => {
     <div>
       <div className="collapsible">
         <div className="header" {...getToggleProps()}>
-          {isExpanded ? "All Seasons ↓" : "Show Seasons"}
+          {isExpanded ? "All Seasons" : "Show Seasons"}
         </div>
         <div {...getCollapseProps()}>
           <div className="content">

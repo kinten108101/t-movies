@@ -58,13 +58,11 @@ export const SeasonDetails = () => {
     <div className="mainview">
       <div className="season-detail">
         <img loading="eager" src={season?.image?.original} alt="#" />
-        <h3>Premier date: {season?.premiereDate}</h3>
         <div>
           {season?.endDate ? (
             <h3>Premier date: {season?.premiereDate}</h3>
           ) : null}
         </div>
-        //Episode list//
         {all_episodes}
       </div>
     </div>

@@ -18,7 +18,7 @@ const NavCmdFeed = () => {
   return (
     <Link className="nav-cmd" id="nav-cmd-feed" to="/feed">
       <div className="nav-cmd-title">Feed</div>
-      <div className="nav-cmd-count">{count}</div>
+      <div className="nav-cmd-count">></div>
     </Link>
   );
 };
@@ -28,7 +28,7 @@ const NavCmdTrending = () => {
   return (
     <Link className="nav-cmd" id="nav-cmd-trending" to="/trending">
       <div className="nav-cmd-title">Trending</div>
-      <div className="nav-cmd-count">{count}</div>
+      <div className="nav-cmd-count">></div>
     </Link>
   );
 };
@@ -69,9 +69,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <SiteHeader />
       <Searchbar />
-      <NavCmdLibrary />
       <NavCmdTrending />
-      <NavCmdFeed />
       <Credit />
       <div className="sidebar-footer" />
     </div>

@@ -25,7 +25,7 @@ export const MovieDetails = () => {
       <div className="nhanvat">
           <img loading="lazy" src={nhanvat?.character?.image?.original} />
           <h3>{nhanvat?.person?.name}</h3>
-          <p>As {nhanvat?.character?.name}</p>
+          <p>{nhanvat?.character?.name}</p>
       </div>
     </Link>
   ));
@@ -40,22 +40,18 @@ export const MovieDetails = () => {
   const next_episode = movie?._embedded?.nextepisode;
   console.log(next_episode?.airstamp);
 
-  const renderer = ({ days, hours, minutes, seconds, completed }) => {
+  const countdown_renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
       // Render a complete state
-      return <h2>Airing</h2>;
+      return <h2>- Airing</h2>;
     } else {
       // Render a countdown
       return (
-        <h2>
-          <span>
-            <strong>
-              Next episode 『 SEASON {next_episode?.season} | EP
-              {next_episode?.number} 』
-            </strong>
-            : {days} days, {hours} hours, {minutes} minutes, {seconds} seconds
-          </span>
-        </h2>
+        <div className="md-countdown-output">
+              - Next: {next_episode?.season}x{next_episode?.number}
+              <br />
+              {days} days, {hours} hours, {minutes} minutes, {seconds} seconds
+        </div>
       );
     }
   };
@@ -63,12 +59,13 @@ export const MovieDetails = () => {
   const ret_two = () => (
     <div className="movie-detail mainview">
       <div className="md-header-block">
-        <img loading="lazy" className="md-header-col-left md-header-thumbnail" src={movie?.image?.original} alt="#" />
+        <div className="md-header-col-left">
+          <img loading="lazy" className="md-header-thumbnail" src={movie?.image?.original} alt="#" />
+        </div>
         <div className="md-header-col-right">
           <div className="md-header-col-right-row-0">
             <div className="md-header-title">{movie?.name}</div>
-            <div className="md-header-rating">Numerical Rating: {movie?.rating?.average}</div>
-            <h2>Status: {movie?.status}</h2>
+            <div className="md-header-rating">Rating: {movie?.rating?.average}</div>
             <div className="md-header-genre-block">Genre: {md_genre_tags_render}</div>
           </div>
           <div className="md-header-col-right-row-1">
@@ -78,11 +75,12 @@ export const MovieDetails = () => {
         </div>
       </div>
       <div className="md-countdown">
-        {next_episode?.airstamp ? (
-          <div>
-            <Countdown date={`${next_episode?.airstamp}`} renderer={renderer} />
-          </div>
-        ) : null}
+        <div className="md-countdown-screen">
+          <div className="md-countdown-output">- Status: {movie?.status}</div>
+          {next_episode?.airstamp ? (
+              <Countdown date={`${next_episode?.airstamp}`} renderer={countdown_renderer} />
+          ) : null}
+        </div>
         <Seasons id={id} />
       </div>
       {cast && 

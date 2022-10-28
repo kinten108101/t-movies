@@ -7,6 +7,10 @@ body {
   --num: 1em;
   --margin-left-for-sidebar: 12em;
   --gnome-cream-white: #F6F5F4;
+  --gnome-shadow: #c0bfbc;
+  --gnome-blue: #1a5fb4;
+  --mazeboy-screen-yellow: #DACF24;
+  --mazeboy-screen-dark-yellow: #f5c211;
   --primary: #3C948B;
   --pr-dark: #3E6F6A;
   background-color: black;
@@ -132,6 +136,15 @@ body {
   font-family: "Cantarell",monospace;
 }
 
+::placeholder
+{
+  text-align: center;
+}
+
+input {
+  text-align: center;
+}
+
 .nav-cmd {
   display: block;
   height: 2em;
@@ -185,7 +198,6 @@ body {
 .movie-detail {
   color: #303030;
   padding-left: 2em;
-  padding-right: 2em;
 }
 
 .movie-detail p
@@ -217,7 +229,8 @@ body {
 {
   display: block;
   margin-left: 1em;
-
+  width: 70em;
+  height: 90%;
 }
 
 .md-header-col-right
@@ -235,15 +248,20 @@ body {
 {
   padding-up: 1em;
   padding-right: 1em;
-  padding-right: 1em;
+  max-height: 50%;
   overflow: hidden;
+}
+
+.md-header-col-right-row-1
+{
+  overflow: scroll;
 }
 
 .md-header-thumbnail
 {
-  display: block;
-  width: auto;
-  height: 90%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 1em;
 }
 
@@ -293,12 +311,47 @@ body {
   width: 30em;
 }
 
+/* Movie Detail's Countdown */
+
+.md-countdown
+{
+  background-color: var(--primary);
+  border-radius: 1em;
+  box-shadow: 0 10px 0 0 var(--pr-dark);
+  padding-top: 10px;
+  margin-bottom: 3em;
+  width: 20em;
+}
+
+.md-countdown-output
+{
+  font-family: "Courier Prime", serif;
+}
+.md-countdown-out-status
+{
+  text-align: center;
+}
+
+.md-countdown-screen
+{
+  background-color: var(--mazeboy-screen-yellow);
+  border-radius: 1em;
+  border-color: black;
+  border-width: 5px;
+  border-style: double;
+  margin: 10px;
+  width: auto;
+  height: auto;
+  padding: 1em;
+}
+
 /* Movie Detail's Cast panel */
 
 .md-cast-panel
 {
   display: block;
-  background-color: #3C5855;
+  border-radius: 1em 0 0 0;
+  background-color: var(--gnome-cream-white);
   font-family: "Cantarell",serif;
   width: 100%;
   padding-left: 1em;
@@ -318,28 +371,67 @@ body {
 }
 
 .nhanvat {
-  width: 15em;
-  height: 5em;
+  width: 10em;
+  height: 15em;
+  margin-left: 1em;
   margin-bottom: 1em;
-  background-color: #3C948B;
-  overflow: hidden;
+  box-shadow: 0 2px 15px 0px var(--gnome-shadow);
   display: inline-flex;
-  box-shadow: 0 6px 0 0 #3E6F6A;
+  flex-direction: column;
+  background-color: var(--gnome-cream-white);
+  overflow: hidden;
+  border-radius: 1em;
+}
+
+.nhanvat:hover
+{
+  animation: nhanvat-hover 1s ease-out forwards;
+}
+
+@keyframes nhanvat-hover
+{
+  0%
+  {
+    transform: scale(1.0);
+  }
+  100%
+  {
+    transform: scale(1.07);
+  }
+}
+
+.md-cast-cards-list a,
+.md-cast-cards-list a:visited
+{
+  text-decoration: none;
 }
 
 .nhanvat img {
-  width: auto;
-  height: inherit;
+  width: 100%;
+  height: 9em;
   margin-right: 1em;
   float: left;
   object-fit: cover;
+  margin-bottom: 1em;
 }
 
 .nhanvat h3,
 .nhanvat p {
-  margin-left: 15px;
+  margin: 0;
+  margin-left: 1em;
+  margin-right: 1em;
   display: block;
-  margin: 2px 0 0 0;
+}
+
+.nhanvat h3
+{
+  color: var(--gnome-blue);
+  line-height: 1.2em;
+}
+
+.nhanvat p
+{
+  color: var(--mazeboy-screen-dark-yellow);
 }
 
 .actor-details {
@@ -363,6 +455,7 @@ body {
 
 .collapsible {
   margin: 1rem 0rem 1rem 0rem;
+  color: white;
 }
 
 .collapsible .content {
@@ -402,4 +495,66 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.ad-header
+{
+  display: flex;
+  flex-direction: column;
+  width: 10em;
+}
+
+.ad-head-thumbnail
+{
+  width: inherit;
+  max-height: 15em;
+}
+
+.ad-head-name
+{
+  width: inherit;
+  text-align: center;
+  font-family: "Cantarell", serif;
+  font-style: italic;
+  color: var(--gnome-cream-white);
+}
+
+/* Mobile aspect ratio section */
+
+@media screen and (max-width : 640px)
+{
+  .wrapper
+  {
+    margin: 0;
+  }
+  .sidebar
+  {
+    position: static;
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  .logo
+  {
+    width: 10vw;
+  }
+  .mainview
+  {
+    margin: 0;
+    position: relative;
+  }
+  .movie-detail
+  {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .md-countdown
+  {
+    width: 100%;
+  }
+  .md-cast-panel
+  {
+    border-radius: 1em 1em 0 0;
+    padding-left : 0;
+    padding-right: 0;
+  }
 }

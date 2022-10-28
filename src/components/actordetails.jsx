@@ -49,13 +49,9 @@ const ActorDetails = () => {
   }, [id]);
 
   return (
-    <div className="actor-details">
-      <h2>{actor?.name}</h2>
-      <img loading="lazy" src={actor?.image?.original} alt="#" />
-      <h2>Country: {actor?.country?.name}</h2>
-      <h1>
-        <strong>Known for</strong>
-      </h1>
+    <div className="ad-header">
+      <img className="ad-head-thumbnail" loading="lazy" src={actor?.image?.original} alt="#" />
+      <div className="ad-head-name">{actor?.name}</div>
     </div>
   );
 };
