@@ -7,7 +7,7 @@
     "webpack-start-legacy": "webpack serve --config ./webpack.config.js --mode development",
     "bundle-prod": "webpack --progress --mode production",
     "bundle-dev": "webpack --progress --mode development",
-    "serve": "http-server-spa /dist /index.html $PORT",
+    "serve": "http-server-spa /dist index.html $PORT",
     "test": "nodemon src/index.js"
   },
   "babel": {
