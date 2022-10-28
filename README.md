@@ -8,3 +8,9 @@ Check out [our concepts on Figma](https://www.figma.com/file/0f79pt9KEtZISNhnJgl
 - Trending view
 - Search for shows
 - Click on card to see details
+- Next Episode Counter
+- Shows of the same cast member
+- Episodes list per season
+
+# WIP
+- Follow your favorite show
