@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "../styles/main.css";
+import { Searchbar } from "./searchbar";
 
 const NavCmdLibrary = () => {
   let count = 5;
@@ -17,6 +18,16 @@ const NavCmdFeed = () => {
   return (
     <Link className="nav-cmd" id="nav-cmd-feed" to="/feed">
       <div className="nav-cmd-title">Feed</div>
+      <div className="nav-cmd-count">{count}</div>
+    </Link>
+  );
+};
+
+const NavCmdTrending = () => {
+  let count = 69;
+  return (
+    <Link className="nav-cmd" id="nav-cmd-trending" to="/trending">
+      <div className="nav-cmd-title">Trending</div>
       <div className="nav-cmd-count">{count}</div>
     </Link>
   );
@@ -56,16 +67,10 @@ const Sidebar = () => {
   };
   return (
     <div className="sidebar">
-      <div className="sidebar-header"></div>
       <SiteHeader />
-      <form onSubmit={handleSearch}>
-        <input
-          className="searchbar"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-        />
-      </form>
+      <Searchbar />
       <NavCmdLibrary />
+      <NavCmdTrending />
       <NavCmdFeed />
       <Credit />
       <div className="sidebar-footer" />
