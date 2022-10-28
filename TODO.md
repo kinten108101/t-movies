@@ -1,4 +1,4 @@
-KINTEN/TODO: Fix CSS
+KINTEN/TODO: Fix CS
 KINTEN/TODO/DONE: Get Heroku to deploy this repo
 KINTEN/TODO/CANCELED: Window popup?
 KINTEN/TODO/DONE: Fix React Router not handling non-root requests
