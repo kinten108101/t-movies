@@ -8,7 +8,6 @@
     "bundle-prod": "webpack --progress --mode production",
     "bundle-dev": "webpack --progress --mode development",
     "serve": "http-server-spa dist index.html ${PORT}",
-    "build": "react-scripts build",
     "test": "nodemon src/index.js"
   },
   "babel": {
