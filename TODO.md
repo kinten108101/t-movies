@@ -23,3 +23,5 @@ TODO: Show People’s detail
 TODO: The detail page for each entity (Episodes, etc.)
 TODO/DONE: Search for TV Shows and People
 TODO: Users can follow their favorite Shows / Artists
+
+TODO: No empty thumbnail placeholder
