@@ -229,8 +229,8 @@ input {
 {
   display: block;
   margin-left: 1em;
-  width: 70em;
   height: 90%;
+  flex: none;
 }
 
 .md-header-col-right
@@ -319,6 +319,7 @@ input {
   border-radius: 1em;
   box-shadow: 0 10px 0 0 var(--pr-dark);
   padding-top: 10px;
+  padding-bottom: 7px;
   margin-bottom: 3em;
   width: 20em;
 }
@@ -353,9 +354,7 @@ input {
   border-radius: 1em 0 0 0;
   background-color: var(--gnome-cream-white);
   font-family: "Cantarell",serif;
-  width: 100%;
   padding-left: 1em;
-  padding-right: 1em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
@@ -372,7 +371,7 @@ input {
 
 .nhanvat {
   width: 10em;
-  height: 15em;
+  height: 20em;
   margin-left: 1em;
   margin-bottom: 1em;
   box-shadow: 0 2px 15px 0px var(--gnome-shadow);
@@ -408,11 +407,19 @@ input {
 
 .nhanvat img {
   width: 100%;
-  height: 9em;
+  height: 11em;
   margin-right: 1em;
   float: left;
   object-fit: cover;
   margin-bottom: 1em;
+}
+
+.nhanvat-desc
+{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
 }
 
 .nhanvat h3,
@@ -448,9 +455,10 @@ input {
 
 .season-tag {
   padding: 6px;
-  border: 2px solid #7f7f7f;
+  border: 2px solid var(--gnome-cream-white);
   margin: 0.5rem 0rem 1rem 0rem;
   border-radius: 0.314em;
+  text-decoration: none;
 }
 
 .collapsible {
@@ -461,13 +469,21 @@ input {
 .collapsible .content {
   padding: 6px;
 }
+.collapsible .content a{
+  text-decoration: none;
+  color: var(--gnome-white);
+  text-align: center;
+}
+
+
 .collapsible .header {
   text-align: center;
   padding: 6px;
   cursor: pointer;
-  border: 2px solid #7f7f7f;
-  margin: 0.5rem 0rem 1rem 0rem;
+  border: 2px solid var(--gnome-cream-white);
+  margin: 0.5rem 0.5rem 1rem 0.5rem;
   border-radius: 0.314em;
+  font-family: "Courier Prime", serif;
 }
 
 .season-detail {

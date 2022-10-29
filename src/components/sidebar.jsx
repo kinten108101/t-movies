@@ -37,7 +37,9 @@ const SiteHeader = () => {
   const siteSubtitle = "TV for TVMaze";
   return (
     <div className="site-header">
-      <img src="/assets/mazeboy.svg" className="logo" />
+      <Link to="/">
+        <img src="/assets/mazeboy.svg" className="logo" />
+      </Link>
       <div className="site-subtitle">{siteSubtitle}</div>
     </div>
   );

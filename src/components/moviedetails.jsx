@@ -24,8 +24,10 @@ export const MovieDetails = () => {
     <Link to={`/actor/${nhanvat?.person?.id}`}>
       <div className="nhanvat">
           <img loading="lazy" src={nhanvat?.character?.image?.original} />
-          <h3>{nhanvat?.person?.name}</h3>
-          <p>{nhanvat?.character?.name}</p>
+          <div className="nhanvat-desc">
+            <h3>{nhanvat?.person?.name}</h3>
+            <p>{nhanvat?.character?.name}</p>
+          </div>
       </div>
     </Link>
   ));
