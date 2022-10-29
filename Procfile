@@ -1,1 +1,1 @@
-web: npm run serve && echo hi
+web: npm run bundle-prod && npm run serve
