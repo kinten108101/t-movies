@@ -1,1 +1,1 @@
-web: npm run bundle-prod && npm run serve
+web: npm run serve
