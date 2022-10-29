@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap");
 
 body {
   margin: 0;
   padding: 0;
   --num: 1em;
   --margin-left-for-sidebar: 12em;
-  --gnome-cream-white: #F6F5F4;
+  --gnome-cream-white: #f6f5f4;
   --gnome-shadow: #c0bfbc;
   --gnome-blue: #1a5fb4;
-  --mazeboy-screen-yellow: #DACF24;
+  --mazeboy-screen-yellow: #dacf24;
   --mazeboy-screen-dark-yellow: #f5c211;
-  --primary: #3C948B;
-  --pr-dark: #3E6F6A;
+  --primary: #3c948b;
+  --pr-dark: #3e6f6a;
   background-color: black;
 }
 
@@ -23,8 +23,7 @@ body {
   margin-right: auto;
 }
 
-.logo
-{
+.logo {
   width: 60%;
   display: block;
   margin-left: auto;
@@ -32,13 +31,12 @@ body {
   margin-bottom: 0.5em;
 }
 
-.site-subtitle
-{
+.site-subtitle {
   display: block;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  font-family: "Cantarell",monospace;
+  font-family: "Cantarell", monospace;
   font-style: italic;
   font-weight: bolder;
   margin-bottom: 1em;
@@ -48,7 +46,7 @@ body {
   background-color: var(--gnome-cream-white);
   width: 10em;
   height: auto;
-  border-radius: 1em;
+  border-radius: 8px;
   margin-top: 1em;
   display: inline-block;
   position: fixed;
@@ -56,13 +54,12 @@ body {
   padding-bottom: 1em;
 }
 
-.site-credit
-{
+.site-credit {
   display: block;
   margin-top: 2em;
-  font-family: "Cantarell",monospace;
+  font-family: "Cantarell", monospace;
   text-align: center;
-  color: #C0BFBC;
+  color: #c0bfbc;
 }
 
 .mainview {
@@ -76,16 +73,13 @@ body {
 
 /* hide scroll bar */
 
-.mainview::-webkit-scrollbar
-{
+.mainview::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
-  
 }
 
-.mainview
-{
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+.mainview {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .cgcard {
@@ -100,11 +94,12 @@ body {
 
 .cgcard_thumbnail {
   width: 10em;
-  height: 16em;
+  height: 16.5em;
   background-size: auto 16em;
   position: absolute;
-  border-radius: 1em;
+  border-radius: 8px;
   box-shadow: 0pt -7pt 2pt 0pt black inset;
+  background-position: center top;
 }
 
 .cgcard_title {
@@ -132,12 +127,11 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 5em;
-  font-family: "Cantarell",monospace;
+  border-radius: 6px;
+  font-family: "Cantarell", monospace;
 }
 
-::placeholder
-{
+::placeholder {
   text-align: center;
 }
 
@@ -174,11 +168,11 @@ input {
 .nav-cmd-count {
   font-family: "Cantarell", monospace;
   font-weight: bold;
-  color: #F6F5F4;
+  color: #f6f5f4;
   background-color: #5e5c64;
   border-radius: 1em;
   display: flex;
-  align-items: center; /* vertical */ 
+  align-items: center; /* vertical */
   justify-content: safe center; /* horizontal */
   float: right;
   /* below is the current way to vertically center the element */
@@ -190,8 +184,7 @@ input {
 }
 
 .sidebar a,
-.sidebar a:visited
-{
+.sidebar a:visited {
   color: inherit;
 }
 
@@ -200,41 +193,36 @@ input {
   padding-left: 2em;
 }
 
-.movie-detail p
-{
-  font-family: "Cantarell",monospace;
+.movie-detail p {
+  font-family: "Cantarell", monospace;
 }
 
-.movie-detail h2
-{
+.movie-detail h2 {
   font-family: "Courier Prime";
   text-align: center;
 }
 
 /* Movie Detail's Header */
 
-.md-header-block
-{
+.md-header-block {
   display: flex;
   align-items: center;
   width: 100%;
   height: 20em;
   background-color: var(--gnome-cream-white);
-  font-family: "Cantarell",serif;
-  border-radius: 1em 0 0 1em;
+  font-family: "Cantarell", serif;
+  border-radius: 0.618em 0 0 0.618em;
   margin-bottom: 32px;
 }
 
-.md-header-col-left
-{
+.md-header-col-left {
   display: block;
   margin-left: 1em;
   height: 90%;
   flex: none;
 }
 
-.md-header-col-right
-{
+.md-header-col-right {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -244,45 +232,38 @@ input {
 }
 
 .md-header-col-right-row-0,
-.md-header-col-right-row-1
-{
+.md-header-col-right-row-1 {
   padding-up: 1em;
   padding-right: 1em;
   max-height: 50%;
   overflow: hidden;
 }
 
-.md-header-col-right-row-1
-{
+.md-header-col-right-row-1 {
   overflow: scroll;
 }
 
-.md-header-thumbnail
-{
+.md-header-thumbnail {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 1em;
+  border-radius: 0.618em;
 }
 
-.md-header-title
-{
+.md-header-title {
   display: inline-block;
   font-size: 2em;
 }
 
-.md-header-rating
-{
+.md-header-rating {
   display: block;
 }
 
-.md-header-genre-block
-{
+.md-header-genre-block {
   display: block;
 }
 
-.md-header-genre-tag
-{
+.md-header-genre-tag {
   display: inline;
   background-color: var(--primary);
   color: var(--gnome-cream-white);
@@ -295,26 +276,22 @@ input {
   margin-right: 0.1em;
 }
 
-.md-body-block
-{
+.md-body-block {
   display: flex;
 }
 
-.md-header-separator
-{
+.md-header-separator {
   border-color: #303030;
 }
 
-.md-desc-panel
-{
+.md-desc-panel {
   display: block;
   width: 30em;
 }
 
 /* Movie Detail's Countdown */
 
-.md-countdown
-{
+.md-countdown {
   background-color: var(--primary);
   border-radius: 1em;
   box-shadow: 0 10px 0 0 var(--pr-dark);
@@ -324,17 +301,14 @@ input {
   width: 20em;
 }
 
-.md-countdown-output
-{
+.md-countdown-output {
   font-family: "Courier Prime", serif;
 }
-.md-countdown-out-status
-{
+.md-countdown-out-status {
   text-align: center;
 }
 
-.md-countdown-screen
-{
+.md-countdown-screen {
   background-color: var(--mazeboy-screen-yellow);
   border-radius: 1em;
   border-color: black;
@@ -348,25 +322,22 @@ input {
 
 /* Movie Detail's Cast panel */
 
-.md-cast-panel
-{
+.md-cast-panel {
   display: block;
   border-radius: 1em 0 0 0;
   background-color: var(--gnome-cream-white);
-  font-family: "Cantarell",serif;
+  font-family: "Cantarell", serif;
   padding-left: 1em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
 
-.md-cast-title
-{
+.md-cast-title {
   font-weight: bold;
   margin-bottom: 1em;
 }
 
-.md-cast-cards-list
-{
+.md-cast-cards-list {
 }
 
 .nhanvat {
@@ -382,26 +353,21 @@ input {
   border-radius: 1em;
 }
 
-.nhanvat:hover
-{
+.nhanvat:hover {
   animation: nhanvat-hover 1s ease-out forwards;
 }
 
-@keyframes nhanvat-hover
-{
-  0%
-  {
-    transform: scale(1.0);
+@keyframes nhanvat-hover {
+  0% {
+    transform: scale(1);
   }
-  100%
-  {
+  100% {
     transform: scale(1.07);
   }
 }
 
 .md-cast-cards-list a,
-.md-cast-cards-list a:visited
-{
+.md-cast-cards-list a:visited {
   text-decoration: none;
 }
 
@@ -414,8 +380,7 @@ input {
   margin-bottom: 1em;
 }
 
-.nhanvat-desc
-{
+.nhanvat-desc {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -430,14 +395,12 @@ input {
   display: block;
 }
 
-.nhanvat h3
-{
+.nhanvat h3 {
   color: var(--gnome-blue);
   line-height: 1.2em;
 }
 
-.nhanvat p
-{
+.nhanvat p {
   color: var(--mazeboy-screen-dark-yellow);
 }
 
@@ -469,12 +432,11 @@ input {
 .collapsible .content {
   padding: 6px;
 }
-.collapsible .content a{
+.collapsible .content a {
   text-decoration: none;
   color: var(--gnome-white);
   text-align: center;
 }
-
 
 .collapsible .header {
   text-align: center;
@@ -513,21 +475,18 @@ input {
   margin-right: auto;
 }
 
-.ad-header
-{
+.ad-header {
   display: flex;
   flex-direction: column;
   width: 10em;
 }
 
-.ad-head-thumbnail
-{
+.ad-head-thumbnail {
   width: inherit;
   max-height: 15em;
 }
 
-.ad-head-name
-{
+.ad-head-name {
   width: inherit;
   text-align: center;
   font-family: "Cantarell", serif;
@@ -537,40 +496,32 @@ input {
 
 /* Mobile aspect ratio section */
 
-@media screen and (max-width : 38em)
-{
-  .wrapper
-  {
+@media screen and (max-width: 38em) {
+  .wrapper {
     margin: 0;
   }
-  .sidebar
-  {
+  .sidebar {
     position: static;
     width: 100%;
     margin-bottom: 2em;
   }
-  .logo
-  {
+  .logo {
     width: 10vw;
   }
-  .mainview
-  {
+  .mainview {
     margin: 0;
     position: relative;
   }
-  .movie-detail
-  {
+  .movie-detail {
     padding-left: 0;
     padding-right: 0;
   }
-  .md-countdown
-  {
+  .md-countdown {
     width: 100%;
   }
-  .md-cast-panel
-  {
+  .md-cast-panel {
     border-radius: 1em 1em 0 0;
-    padding-left : 0;
+    padding-left: 0;
     padding-right: 0;
   }
 }
