@@ -3,7 +3,7 @@ ADDENDUM: webpack is a module system (or module bundler in the parlance of web d
 ADDENDUM: webpack needs a configuration file. 
 ADDENDUM: webpack module bundling system doesn't work on local browser environment. Need to serve your web app to local server.
 ADDENDUM: react and react-dom do not have jsx by default. You must use the babel transpiler which translates jsx into plain js.
-ADDENDUM: to install babel, install @babel/core (base), @babel/preset-env (the first must-have preset for babel, which enables smart transpilation), and babel-loader for webpack; also @babel/preset-react for JSX. Add necessary lines to package.json (and webpack.config.js for webpack)
+ADDENDUM: Babel is a JS transpiler. Plugin-wise, Babel can be extended to transpile JSX. To install babel, install @babel/core (base, which doesnt do anything), @babel/preset-env (the first must-have preset for babel, which "enables transforms for ES2015+"), and babel-loader for webpack; also @babel/preset-react for JSX. Add necessary lines to package.json (and webpack.config.js for webpack). Or you can create babel.config.json. Also, install @babel/cli if you use babel in scripts.
 ADDENDUM: install style-loader and css-loader to load css files. In webpack config, remember to put style-loader BEFORE css-loader. The roles of these two webpack loaders remain unclear.
 ADDENDUM: stateful classes have been replaced with stateless functions with hooks
 ADDENDUM: Functions have to be CamelCased in order to be recognized as React components

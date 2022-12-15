@@ -79,13 +79,13 @@ export const MovieDetails = () => {
       <div className="md-countdown">
         <div className="md-countdown-screen">
           <div className="md-countdown-output">- Status: {movie?.status}</div>
-          {next_episode?.airstamp ? (
+          {next_episode?.airstamp && (
               <Countdown date={`${next_episode?.airstamp}`} renderer={countdown_renderer} />
-          ) : null}
+          )}
         </div>
         <Seasons id={id} />
       </div>
-      {cast && 
+      {cast &&
       <div className="md-cast-panel">
         <div className="md-cast-title">CAST</div>
         <div className="md-cast-cards-list">{md_cast_cards_render}</div>
